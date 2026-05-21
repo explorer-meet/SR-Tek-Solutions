@@ -25,8 +25,10 @@ export default function CaseStudiesPage() {
     <HeroShell
       eyebrow="Case Studies"
       title="Proof of delivery across real-world programs"
+      titleClassName="hero-title-single-line"
       subtitle="A snapshot of the execution outcomes we help clients achieve."
       align="center"
+      tone="case-studies"
     >
       <section className="pro-block reveal">
         <SectionHeading

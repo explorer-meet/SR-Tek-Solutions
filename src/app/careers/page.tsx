@@ -31,6 +31,7 @@ export default function CareersPage() {
       title="Grow your career with high-impact technology programs"
       subtitle="Join teams solving complex enterprise problems across engineering, cloud, data, and consulting."
       align="center"
+      tone="careers"
     >
       <section className="pro-block reveal">
         <SectionHeading

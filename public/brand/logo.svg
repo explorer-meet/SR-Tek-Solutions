@@ -1,6 +1,12 @@
-<svg width="220" height="54" viewBox="0 0 220 54" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SR Tek Solutions logo">
-  <rect width="220" height="54" rx="12" fill="#102126"/>
-  <rect x="6" y="6" width="208" height="42" rx="9" fill="#0f766e"/>
-  <text x="16" y="34" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700" font-size="22">SR Tek</text>
-  <text x="108" y="34" fill="#d7fff7" font-family="Arial, sans-serif" font-weight="500" font-size="16">Solutions</text>
+<svg width="480" height="140" viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SR Tek Solutions logo">
+  <g transform="translate(16,16)" fill="none" stroke="#9acb84" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 58 C 24 18, 72 8, 110 30 C 132 43, 144 63, 141 86" stroke-width="3"/>
+    <ellipse cx="74" cy="52" rx="40" ry="27" stroke-width="3"/>
+    <line x1="74" y1="67" x2="74" y2="98" stroke-width="3"/>
+    <rect x="64" y="98" width="20" height="20" rx="6" stroke-width="3"/>
+    <circle cx="74" cy="52" r="6" fill="#9acb84"/>
+  </g>
+
+  <text x="178" y="76" fill="#5ea23f" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="800" letter-spacing="1">SR TEK</text>
+  <text x="182" y="118" fill="#767676" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="500" letter-spacing="9">SOLUTIONS</text>
 </svg>

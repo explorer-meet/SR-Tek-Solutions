@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ArrowRight, Mail, Menu, Phone, Sparkles, X } from "lucide-react";
@@ -33,7 +32,10 @@ export function SiteHeader() {
       </div>
       <div className="container header-inner">
         <Link href="/" className="logo" onClick={() => setOpen(false)}>
-          <Image src="/brand/logo.svg" alt={`${siteMeta.name} logo`} width={170} height={42} priority />
+            <span className="logo-brand" aria-label={`${siteMeta.name} logo`}>
+              <strong className="logo-main">SK TEK</strong>
+              <span className="logo-sub">SOLUTIONS</span>
+            </span>
         </Link>
         <button
           className="menu-btn"
@@ -63,7 +65,7 @@ export function SiteHeader() {
           </ul>
         </nav>
         <div className="header-cta">
-          <Link className="btn btn-secondary" href="/contact" prefetch>
+          <Link className="btn btn-secondary header-cta-btn" href="/contact" prefetch>
             Talk to Team <ArrowRight size={16} />
           </Link>
         </div>

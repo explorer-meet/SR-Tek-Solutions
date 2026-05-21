@@ -1,5 +1,4 @@
-"use client";
-
+import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { IconGlyph } from "@/components/icon-glyph";
 import { capabilityPillars, services } from "@/lib/site-data";
@@ -73,7 +72,7 @@ export function HomeScrollStory() {
           <div className="story-brief-grid">
             <div className="story-brief-card">
               <span className="eyebrow">Proof tiles</span>
-              <h2>Designed to move from promise to proof.</h2>
+              <h2>Each tile builds buyer confidence.</h2>
               <p>
                 Each tile highlights one phase of buyer confidence, from first impression to service depth and final
                 action.
@@ -125,11 +124,11 @@ export function HomeScrollStory() {
                   </>
                 ) : null}
                 {index === 3 ? (
-                  <div className="story-cta-chip">
+                  <Link className="story-cta-chip" href="/contact" prefetch>
                     <Sparkles size={16} />
                     <span>Review the proof, then connect</span>
                     <ArrowUpRight size={16} />
-                  </div>
+                  </Link>
                 ) : null}
               </article>
             ))}

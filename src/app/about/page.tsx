@@ -10,6 +10,7 @@ export default function AboutPage() {
       title="Mission-driven staffing and consulting, built on trust."
       subtitle="We align business goals, delivery speed, and high-fit talent so your technology programs move with confidence."
       align="center"
+      tone="about"
     >
       <section className="pro-block reveal">
         <SectionHeading

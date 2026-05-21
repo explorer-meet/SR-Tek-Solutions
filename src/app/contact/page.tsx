@@ -8,8 +8,10 @@ export default function ContactPage() {
     <HeroShell
       eyebrow="Contact"
       title="Talk to our delivery and talent team"
+      titleClassName="hero-title-single-line"
       subtitle="Share your goals and we will map a focused next step with the right specialists."
       align="center"
+      tone="contact"
     >
       <section className="pro-block reveal">
         <div className="contact-grid pro-contact-grid">

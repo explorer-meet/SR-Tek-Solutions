@@ -32,6 +32,7 @@ export default function SolutionsPage() {
       title="Integrated solutions for business transformation"
       subtitle="We combine consulting, engineering, and staffing into practical solution blueprints."
       align="center"
+      tone="solutions"
     >
       <section className="pro-block reveal">
         <SectionHeading

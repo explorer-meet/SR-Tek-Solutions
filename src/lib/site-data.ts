@@ -5,6 +5,12 @@ export const siteMeta = {
   shortName: "SR Tek",
   email: "hr@srteksolutions.com",
   phones: ["201-905-3550", "732-640-7972"],
+  socialLinks: {
+    linkedin: "https://www.linkedin.com/company/sr-tek-solutions/",
+    facebook: "https://www.facebook.com/srteksolutions",
+    instagram: "https://www.instagram.com/srteksolutions",
+    youtube: "https://www.youtube.com/@srteksolutions",
+  },
   addresses: [
     "43 W Lake Court, Franklin, NJ 08873",
     "1581 RT 27, Suite 101, Edison, NJ 08817",

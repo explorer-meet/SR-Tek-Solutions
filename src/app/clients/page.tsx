@@ -8,6 +8,7 @@ export default function ClientsPage() {
       title="Client Focus"
       subtitle="Trusted by organizations building large-scale digital programs."
       align="center"
+      tone="clients"
     >
       <div className="prose mx-auto text-center mt-8">
         <p>We support global and regional enterprises across mission-critical programs where talent quality and execution speed are non-negotiable.</p>

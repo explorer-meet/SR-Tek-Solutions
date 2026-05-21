@@ -31,8 +31,10 @@ export default function ServicesPage() {
     <HeroShell
       eyebrow="What We Do"
       title="Service lines designed for enterprise delivery"
+      titleClassName="services-hero-title-fit"
       subtitle="From AI to cloud and staffing, we combine specialist expertise with disciplined execution."
       align="center"
+      tone="services"
     >
       <section className="pro-block reveal">
         <div className="pillar-grid">

@@ -11,6 +11,7 @@ export default function IndustriesPage() {
       titleClassName="hero-title-single-line"
       subtitle="We shape digital delivery models that fit the operational and compliance realities of each industry."
       align="center"
+      tone="industries"
     >
       <section className="pro-block reveal">
         <SectionHeading

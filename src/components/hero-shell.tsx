@@ -7,6 +7,7 @@ interface HeroShellProps {
   children?: React.ReactNode;
   eyebrow?: string;
   titleClassName?: string;
+  tone?: "about" | "services" | "industries" | "solutions" | "case-studies" | "clients" | "careers" | "contact";
 }
 
 export default function HeroShell({
@@ -16,12 +17,13 @@ export default function HeroShell({
   children,
   eyebrow,
   titleClassName,
+  tone,
 }: HeroShellProps) {
   return (
     <main>
       <section className="page-hero pro-page-hero">
         <div className="container">
-          <div className={`page-hero-shell pro-page-hero-shell align-${align}`}>
+          <div className={`page-hero-shell pro-page-hero-shell align-${align}${tone ? ` hero-tone-${tone}` : ""}`}>
             {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
             <h1 className={titleClassName}>{title}</h1>
             {subtitle ? <p>{subtitle}</p> : null}

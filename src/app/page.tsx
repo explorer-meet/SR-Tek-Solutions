@@ -69,6 +69,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Services"
             title="Specialized services for high-stakes programs"
+            titleClassName="services-title-single-line"
             description="A portfolio built for enterprise delivery across engineering, data, cloud, and staffing."
             action={
               <Link className="btn btn-secondary" href="/services" prefetch>

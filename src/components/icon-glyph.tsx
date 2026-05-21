@@ -1,14 +1,21 @@
 import {
+  Atom,
   BadgeCheck,
+  Beaker,
+  Blocks,
   BriefcaseBusiness,
   Building2,
   CircuitBoard,
   CloudCog,
+  Code2,
+  Database,
   Headset,
   Layers3,
+  Network,
   ShieldCheck,
   Sparkles,
   Telescope,
+  Truck,
   Workflow,
 } from "lucide-react";
 
@@ -24,6 +31,14 @@ const iconMap = {
   building: Building2,
   badge: BadgeCheck,
   telescope: Telescope,
+  truck: Truck,
+  flask: Beaker,
+  react: Atom,
+  node: Network,
+  python: Code2,
+  database: Database,
+  java: Blocks,
+  kubernetes: CloudCog,
 } as const;
 
 export type IconName = keyof typeof iconMap;

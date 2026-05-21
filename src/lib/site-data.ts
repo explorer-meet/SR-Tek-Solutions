@@ -13,55 +13,24 @@ export const siteMeta = {
 
 export const navItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/clients", label: "Clients" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/industries", label: "Industries" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/about", label: "About" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const services = [
-  {
-    title: "Data Warehousing and Business Intelligence",
-    category: "Data",
-    icon: "layers" as IconName,
-    description:
-      "Data architecture, pipelines, and reporting models that improve strategic decisions.",
-  },
-  {
-    title: "Functional Business Analysts",
-    category: "Business",
-    icon: "workflow" as IconName,
-    description:
-      "Requirements, process mapping, and stakeholder alignment for delivery clarity.",
-  },
-  {
-    title: "Healthcare Services",
-    category: "Healthcare",
-    icon: "headset" as IconName,
-    description:
-      "Domain-specific staffing and solution execution aligned to compliance needs.",
-  },
-  {
-    title: "System and Database Administration",
-    category: "Infrastructure",
-    icon: "shield" as IconName,
-    description:
-      "Secure operations, proactive monitoring, and high-availability administration.",
-  },
-  {
-    title: "Web App and Enterprise Portals",
-    category: "Web",
-    icon: "board" as IconName,
-    description:
-      "Enterprise web experiences built for scale, security, and productivity.",
-  },
-  {
-    title: "Development and Testing",
-    category: "Quality",
-    icon: "badge" as IconName,
-    description:
-      "Robust engineering execution with automation and quality gates.",
-  },
+  { title: "AI & Machine Learning", category: "AI/ML", icon: "sparkles" as IconName, description: "Custom AI solutions, predictive analytics, and automation for business transformation." },
+  { title: "Custom Software Development", category: "Development", icon: "board" as IconName, description: "End-to-end web, mobile, and enterprise app development tailored to your needs." },
+  { title: "Cloud & DevOps", category: "Cloud", icon: "cloud" as IconName, description: "Cloud migration, infrastructure automation, and CI/CD for scalable delivery." },
+  { title: "Data Engineering", category: "Data", icon: "layers" as IconName, description: "Data pipelines, warehousing, and analytics for actionable insights." },
+  { title: "ERP / CRM Solutions", category: "ERP/CRM", icon: "workflow" as IconName, description: "Implementation and integration of leading ERP and CRM platforms." },
+  { title: "IT Staffing", category: "Staffing", icon: "briefcase" as IconName, description: "Flexible staffing solutions to scale your IT teams quickly and efficiently." },
+  { title: "QA Automation", category: "Quality", icon: "badge" as IconName, description: "Automated and manual testing to ensure software quality and reliability." },
+  { title: "Cybersecurity", category: "Security", icon: "shield" as IconName, description: "Security assessments, monitoring, and compliance for enterprise protection." },
 ];
 
 export const capabilityPillars = [
@@ -115,13 +84,36 @@ export const values = [
 ];
 
 export const industries = [
-  { title: "Healthcare", icon: "headset" as IconName, description: "Clinical systems, operations, and compliance-aware delivery." },
-  { title: "Financial Services", icon: "shield" as IconName, description: "Governed data, risk-aware platforms, and secure operations." },
-  { title: "Retail and E-commerce", icon: "board" as IconName, description: "Digital commerce experiences designed for scale." },
-  { title: "Manufacturing", icon: "workflow" as IconName, description: "Operational systems and analytics that simplify complexity." },
-  { title: "Public Sector", icon: "building" as IconName, description: "Mission-focused transformation for agency needs." },
-  { title: "Telecom and Media", icon: "layers" as IconName, description: "Reliability, data, and platform performance under load." },
+  { title: "Healthcare", icon: "headset" as IconName, description: "Digital health, EHR, and compliance-driven solutions." },
+  { title: "Banking & Financial Services", icon: "shield" as IconName, description: "Secure platforms, fintech, and regulatory compliance." },
+  { title: "Retail & E-Commerce", icon: "board" as IconName, description: "Omnichannel commerce, POS, and digital retail innovation." },
+  { title: "Logistics", icon: "truck" as IconName, description: "Supply chain, fleet management, and logistics automation." },
+  { title: "Manufacturing", icon: "workflow" as IconName, description: "Smart factory, IoT, and process optimization." },
+  { title: "Pharma", icon: "flask" as IconName, description: "Pharma IT, R&D, and regulatory data management." },
+  { title: "Telecom", icon: "layers" as IconName, description: "OSS/BSS, network automation, and telecom analytics." },
 ];
+export const techStack = [
+  { name: "AWS", icon: "cloud" as IconName },
+  { name: "Azure", icon: "cloud" as IconName },
+  { name: "Snowflake", icon: "database" as IconName },
+  { name: "Databricks", icon: "database" as IconName },
+  { name: "React", icon: "react" as IconName },
+  { name: "Node.js", icon: "node" as IconName },
+  { name: "SAP", icon: "building" as IconName },
+  { name: "Salesforce", icon: "cloud" as IconName },
+  { name: "Python", icon: "python" as IconName },
+  { name: "Java", icon: "java" as IconName },
+  { name: "Kubernetes", icon: "kubernetes" as IconName },
+];
+export const careersInfo = {
+  highlights: [
+    "Open roles",
+    "Hiring process",
+    "Company culture",
+    "Visa sponsorship if applicable",
+    "Benefits",
+  ],
+};
 
 export const heroSignals = [
   { label: "Talent speed", value: "48h", icon: "sparkles" as IconName },

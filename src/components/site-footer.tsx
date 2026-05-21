@@ -82,7 +82,6 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <span>Copyright 2026 SR Tek Solutions</span>
-        <span>Modernized Next.js implementation with reusable components</span>
       </div>
     </footer>
   );

@@ -5,14 +5,16 @@ export function SectionHeading({
   title,
   description,
   action,
+  align = "left",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   action?: ReactNode;
+  align?: "left" | "center";
 }) {
   return (
-    <div className="section-heading">
+    <div className={`section-heading section-heading-${align}`}>
       <div>
         {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
         <h2>{title}</h2>

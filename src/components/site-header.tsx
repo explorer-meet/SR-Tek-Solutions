@@ -52,6 +52,7 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     className={`nav-link ${active ? "active" : ""}`}
+                    prefetch
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
@@ -62,7 +63,7 @@ export function SiteHeader() {
           </ul>
         </nav>
         <div className="header-cta">
-          <Link className="btn btn-secondary" href="/contact">
+          <Link className="btn btn-secondary" href="/contact" prefetch>
             Talk to Team <ArrowRight size={16} />
           </Link>
         </div>

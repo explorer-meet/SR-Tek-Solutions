@@ -72,12 +72,14 @@ export function ContactForm() {
         <label htmlFor="service">Interested Service</label>
         <select id="service" name="service">
           <option value="">Select an option</option>
-          <option>Data Warehousing and BI</option>
-          <option>Functional Business Analysts</option>
-          <option>Healthcare Services</option>
-          <option>System and Database Administration</option>
-          <option>Web App and Enterprise Portals</option>
-          <option>Development and Testing</option>
+          <option>AI and Machine Learning</option>
+          <option>Custom Software Development</option>
+          <option>Cloud and DevOps</option>
+          <option>Data Engineering</option>
+          <option>ERP and CRM Solutions</option>
+          <option>IT Staffing</option>
+          <option>QA Automation</option>
+          <option>Cybersecurity</option>
         </select>
       </div>
       <div className="form-section-gap">

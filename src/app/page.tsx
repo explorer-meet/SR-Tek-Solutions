@@ -96,25 +96,69 @@ export default function HomePage() {
           </div>
 
           <aside className="hero-art" aria-label="Visual summary">
-            <div className="orb orb-a" />
-            <div className="orb orb-b" />
-            <div className="orb orb-c" />
-            <div className="hero-card hero-card-main">
+            <div className="hero-stage-glow hero-stage-glow-a" />
+            <div className="hero-stage-glow hero-stage-glow-b" />
+            <div className="hero-stage-glow hero-stage-glow-c" />
+
+            <div className="hero-command-card">
               <div className="hero-card-label">
-                  <IconGlyph name="sparkles" className="card-icon" />
-                <span>Delivery pulse</span>
+                <IconGlyph name="sparkles" className="card-icon" />
+                <span>Delivery command center</span>
               </div>
-              <h3>Fast, focused, reliable</h3>
-              <p>Capability-led teams aligned to your roadmap and business language.</p>
+              <h3>Execution visibility at every phase</h3>
+              <p>From strategy to deployment, every lane has accountable owners and clear momentum.</p>
+
+              <div className="hero-command-metrics">
+                <div className="hero-command-metric">
+                  <strong>24h</strong>
+                  <span>Staffing response</span>
+                </div>
+                <div className="hero-command-metric">
+                  <strong>97%</strong>
+                  <span>Sprint reliability</span>
+                </div>
+                <div className="hero-command-metric">
+                  <strong>2.3x</strong>
+                  <span>Delivery velocity</span>
+                </div>
+              </div>
             </div>
-            <div className="hero-card hero-card-floating hero-card-left">
-              <IconGlyph name="telescope" className="card-icon" />
-              <span>Strategy</span>
+
+            <div className="hero-track-grid">
+              <div className="hero-track-row">
+                <div className="hero-track-label">
+                  <IconGlyph name="telescope" className="card-icon" />
+                  <span>Strategy</span>
+                </div>
+                <div className="hero-track-bar">
+                  <span style={{ width: "86%" }} />
+                </div>
+              </div>
+              <div className="hero-track-row">
+                <div className="hero-track-label">
+                  <IconGlyph name="workflow" className="card-icon" />
+                  <span>Execution</span>
+                </div>
+                <div className="hero-track-bar">
+                  <span style={{ width: "92%" }} />
+                </div>
+              </div>
+              <div className="hero-track-row">
+                <div className="hero-track-label">
+                  <IconGlyph name="shield" className="card-icon" />
+                  <span>Governance</span>
+                </div>
+                <div className="hero-track-bar">
+                  <span style={{ width: "88%" }} />
+                </div>
+              </div>
             </div>
-            <div className="hero-card hero-card-floating hero-card-right">
-              <IconGlyph name="workflow" className="card-icon" />
-              <span>Execution</span>
+
+            <div className="hero-status-row">
+              <span className="hero-status-live">Live delivery sync</span>
+              <span className="hero-status-chip">Weekly roadmap checkpoints</span>
             </div>
+
             <div className="hero-gridline" />
           </aside>
         </div>

@@ -32,7 +32,6 @@ export default function CaseStudiesPage() {
     >
       <section className="pro-block reveal">
         <SectionHeading
-          eyebrow="Outcomes"
           title="Recent client impact stories"
           description="Examples of measurable improvements delivered through SR Tek teams and solution tracks."
           align="center"
@@ -40,8 +39,10 @@ export default function CaseStudiesPage() {
         <div className="values-grid pro-case-grid section-balanced-grid">
           {caseStudies.map((study) => (
             <article className="card value-card pro-case-card" key={study.title}>
-              <IconGlyph name={study.icon} className="value-icon" />
-              <h3>{study.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name={study.icon} className="value-icon tile-title-icon" />
+                <span>{study.title}</span>
+              </h3>
               <p>{study.impact}</p>
             </article>
           ))}

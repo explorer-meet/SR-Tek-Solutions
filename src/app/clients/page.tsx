@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IconGlyph } from "@/components/icon-glyph";
 import { clientLogos, industries } from "@/lib/site-data";
 import HeroShell from "@/components/hero-shell";
 
@@ -15,9 +16,11 @@ export default function ClientsPage() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-12">
         {industries.map((industry) => (
-          <div key={industry.title} className="bg-white/5 rounded-xl p-8 flex flex-col items-center text-center shadow-lg">
-            <span className="mb-4 text-4xl text-primary"><i className={`icon-${industry.icon}`}></i></span>
-            <h3 className="font-bold text-lg mb-2">{industry.title}</h3>
+          <div key={industry.title} className="bg-white/5 rounded-xl p-8 flex flex-col text-left shadow-lg">
+            <h3 className="tile-title-row font-bold text-lg mb-2">
+              <IconGlyph name={industry.icon} className="industry-icon tile-title-icon" />
+              <span>{industry.title}</span>
+            </h3>
             <p className="text-muted-foreground text-sm">{industry.description}</p>
           </div>
         ))}

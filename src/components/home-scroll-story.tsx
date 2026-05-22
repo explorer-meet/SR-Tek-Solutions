@@ -6,22 +6,22 @@ import { capabilityPillars, services } from "@/lib/site-data";
 const proofTiles = [
   {
     title: "Promise clarity",
-    caption: "A clean opening statement with aligned value signals and business context.",
+    caption: "Clear value and context from the first view.",
     icon: "sparkles" as const,
   },
   {
     title: "Capability mapping",
-    caption: "Services grouped by domain so buyers can quickly see where SR Tek fits.",
+    caption: "Service lanes grouped so buyers quickly see fit.",
     icon: "workflow" as const,
   },
   {
     title: "Delivery proof",
-    caption: "Concrete service examples and engagement options that demonstrate execution depth.",
+    caption: "Real examples and engagement options that prove execution depth.",
     icon: "layers" as const,
   },
   {
     title: "Action confidence",
-    caption: "A direct path to connect, with clear contact and next-step intent.",
+    caption: "A direct path to connect and move forward.",
     icon: "badge" as const,
   },
 ];
@@ -35,8 +35,8 @@ export function HomeScrollStory() {
             <span className="eyebrow">Proof framework</span>
             <h2>Designed to move from promise to proof.</h2>
             <p>
-              A strong homepage should communicate credibility without relying on scrolling choreography. These tiles
-              keep the message direct, structured, and easier to trust.
+              Credibility should be clear without complex scroll effects. These tiles keep the story direct and easy
+              to trust.
             </p>
           </div>
           <div className="story-intro-panel">
@@ -47,8 +47,8 @@ export function HomeScrollStory() {
               <div className="story-illustration-orbit orbit-c" />
               <div className="story-illustration-core">
                 <IconGlyph name="sparkles" className="story-illustration-icon" />
-                <strong>SR Tek Motion Lab</strong>
-                <span>Scroll-driven narrative systems</span>
+                <strong>SR Tek Proof Lab</strong>
+                <span>Clarity-driven narratives</span>
               </div>
               <div className="story-illustration-node node-a">
                 <IconGlyph name="workflow" className="story-node-icon" />
@@ -74,8 +74,7 @@ export function HomeScrollStory() {
               <span className="eyebrow">Proof tiles</span>
               <h2>Each tile builds buyer confidence.</h2>
               <p>
-                Each tile highlights one phase of buyer confidence, from first impression to service depth and final
-                action.
+                Each tile highlights one confidence phase, from first impression to final action.
               </p>
             </div>
           </div>
@@ -115,7 +114,6 @@ export function HomeScrollStory() {
                         <div className="story-service-sample" key={service.title}>
                           <IconGlyph name={service.icon} className="story-service-icon" />
                           <div>
-                            <strong>{service.category}</strong>
                             <span>{service.title}</span>
                           </div>
                         </div>

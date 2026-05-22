@@ -33,7 +33,7 @@ export function SiteHeader() {
       <div className="container header-inner">
         <Link href="/" className="logo" onClick={() => setOpen(false)}>
             <span className="logo-brand" aria-label={`${siteMeta.name} logo`}>
-              <strong className="logo-main">SK TEK</strong>
+              <strong className="logo-main">SR TEK</strong>
               <span className="logo-sub">SOLUTIONS</span>
             </span>
         </Link>

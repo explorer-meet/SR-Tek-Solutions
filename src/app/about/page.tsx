@@ -64,7 +64,6 @@ export default function AboutPage() {
 
       <section className="pro-block reveal">
         <SectionHeading
-          eyebrow="Operating model"
           title="How delivery is structured"
           description="A clear four-part model that keeps programs readable, controlled, and outcome-focused."
           align="center"
@@ -72,8 +71,10 @@ export default function AboutPage() {
         <div className="about-operating-grid">
           {capabilityPillars.map((pillar) => (
             <article className="pillar-card" key={pillar.title}>
-              <IconGlyph name={pillar.icon} className="pillar-icon" />
-              <h3>{pillar.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name={pillar.icon} className="pillar-icon tile-title-icon" />
+                <span>{pillar.title}</span>
+              </h3>
               <p>{pillar.description}</p>
             </article>
           ))}
@@ -82,7 +83,6 @@ export default function AboutPage() {
 
       <section className="pro-block reveal">
         <SectionHeading
-          eyebrow="Values"
           title="How we work with clients"
           description="These principles shape every engagement and every team we build."
           align="center"
@@ -90,8 +90,10 @@ export default function AboutPage() {
         <div className="values-grid section-balanced-grid">
           {values.map((value) => (
             <article className="card value-card" key={value.title}>
-              <IconGlyph name="badge" className="value-icon" />
-              <h3>{value.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name="badge" className="value-icon tile-title-icon" />
+                <span>{value.title}</span>
+              </h3>
               <p>{value.description}</p>
             </article>
           ))}

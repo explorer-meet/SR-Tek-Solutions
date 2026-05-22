@@ -36,7 +36,6 @@ export default function SolutionsPage() {
     >
       <section className="pro-block reveal">
         <SectionHeading
-          eyebrow="Solution Tracks"
           title="Where we create impact"
           description="Structured offerings that connect business goals to measurable execution."
           align="center"
@@ -44,11 +43,10 @@ export default function SolutionsPage() {
         <div className="services-grid pro-services-grid section-balanced-grid">
           {solutionTracks.map((track) => (
             <article className="service-card service-card-fancy" key={track.title}>
-              <div className="service-topline">
-                <span className="service-tag">Solution lane</span>
-                <IconGlyph name={track.icon} className="service-icon" />
-              </div>
-              <h3>{track.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name={track.icon} className="service-icon tile-title-icon" />
+                <span>{track.title}</span>
+              </h3>
               <p>{track.description}</p>
             </article>
           ))}

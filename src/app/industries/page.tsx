@@ -15,7 +15,6 @@ export default function IndustriesPage() {
     >
       <section className="pro-block reveal">
         <SectionHeading
-          eyebrow="Coverage"
           title="Sectors we support"
           description="Specialized teams and solution playbooks tailored for each domain."
           align="center"
@@ -23,11 +22,10 @@ export default function IndustriesPage() {
         <div className="values-grid pro-industry-grid section-balanced-grid">
           {industries.map((industry) => (
             <article className="card industry-card pro-industry-card" key={industry.title}>
-              <div className="industry-card-head">
-                <IconGlyph name={industry.icon} className="industry-icon" />
-                <span className="industry-card-chip">Sector expertise</span>
-              </div>
-              <h3>{industry.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name={industry.icon} className="industry-icon tile-title-icon" />
+                <span>{industry.title}</span>
+              </h3>
               <p>{industry.description}</p>
             </article>
           ))}

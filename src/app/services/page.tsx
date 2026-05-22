@@ -40,8 +40,10 @@ export default function ServicesPage() {
         <div className="pillar-grid">
           {capabilityPillars.map((pillar) => (
             <article className="pillar-card" key={pillar.title}>
-              <IconGlyph name={pillar.icon} className="pillar-icon" />
-              <h3>{pillar.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name={pillar.icon} className="pillar-icon tile-title-icon" />
+                <span>{pillar.title}</span>
+              </h3>
               <p>{pillar.description}</p>
             </article>
           ))}
@@ -50,7 +52,6 @@ export default function ServicesPage() {
 
       <section className="pro-block reveal">
         <SectionHeading
-          eyebrow="Service Portfolio"
           title="Core delivery capabilities"
           description="Each lane can be delivered as a standalone engagement or blended into a multi-track program."
           align="center"
@@ -58,13 +59,11 @@ export default function ServicesPage() {
         <div className="services-grid pro-services-grid section-balanced-grid">
           {services.map((service) => (
             <article className="service-card service-card-fancy" key={service.title}>
-              <div className="service-topline">
-                <span className="service-tag">{service.category}</span>
-                <IconGlyph name={service.icon} className="service-icon" />
-              </div>
-              <h3>{service.title}</h3>
+              <h3 className="tile-title-row">
+                <IconGlyph name={service.icon} className="service-icon tile-title-icon" />
+                <span>{service.title}</span>
+              </h3>
               <p>{service.description}</p>
-              <span className="service-card-kicker">Enterprise-ready delivery model</span>
             </article>
           ))}
         </div>

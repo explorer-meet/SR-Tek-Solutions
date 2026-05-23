@@ -2092,6 +2092,105 @@ select:hover {
   border-radius: 999px;
 }
 
+.careers-highlights-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.careers-highlights-head {
+  display: grid;
+  gap: 0.52rem;
+  max-width: 72ch;
+}
+
+.careers-highlights-head h2,
+.careers-highlights-head p {
+  margin: 0;
+}
+
+.careers-highlights-head p {
+  color: var(--text-soft);
+}
+
+.careers-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.careers-info-card {
+  overflow: hidden;
+  border-radius: calc(var(--radius-md) + 2px);
+  border: 1px solid rgba(16, 33, 38, 0.08);
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.98), rgba(243, 248, 246, 0.95));
+  box-shadow: 0 14px 34px rgba(16, 33, 38, 0.06);
+  display: grid;
+  grid-template-rows: 132px auto;
+}
+
+.careers-info-visual {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.careers-info-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 30, 35, 0.05) 28%, rgba(11, 30, 35, 0.26) 100%);
+}
+
+.careers-info-body {
+  padding: 0.95rem 0.95rem 1rem;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.careers-info-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.careers-info-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.careers-info-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.careers-info-note {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.careers-info-process .careers-info-visual {
+  background-image: url("https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+
+.careers-info-culture .careers-info-visual {
+  background-image: url("https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+
+.careers-info-visa .careers-info-visual {
+  background-image: url("https://images.pexels.com/photos/3889987/pexels-photo-3889987.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+
+.careers-info-benefits .careers-info-visual {
+  background-image: url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+
 .career-opening-card {
   display: grid;
   gap: 0.9rem;
@@ -2331,6 +2430,8 @@ select:hover {
 
 .contact-form-wrap {
   position: relative;
+  display: grid;
+  gap: 0.85rem;
 }
 
 .contact-form-glow {
@@ -2344,6 +2445,20 @@ select:hover {
 
 .contact-item-accent {
   background: linear-gradient(145deg, rgba(15, 118, 110, 0.14), rgba(255, 255, 255, 0.96));
+}
+
+.contact-book-now {
+  gap: 0.6rem;
+}
+
+.contact-book-now p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.contact-book-now-btn {
+  margin-top: 0.2rem;
+  width: fit-content;
 }
 
 .contact-form-card {
@@ -2823,6 +2938,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .careers-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-title-single-line {
     white-space: normal;
     text-wrap: balance;
@@ -3023,6 +3142,14 @@ textarea {
 
   .careers-merged-shell {
     padding: 0.9rem;
+  }
+
+  .careers-info-card {
+    grid-template-rows: 120px auto;
+  }
+
+  .careers-info-body {
+    padding: 0.85rem 0.85rem 0.92rem;
   }
 
   .careers-merged-copy h2 {
@@ -3565,13 +3692,13 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(132deg, rgba(21, 177, 159, 0.24) 0%, rgba(10, 38, 44, 0.26) 46%, rgba(16, 32, 66, 0.72) 100%);
+  background: linear-gradient(132deg, rgba(21, 177, 159, 0.12) 0%, rgba(10, 38, 44, 0.12) 46%, rgba(16, 32, 66, 0.42) 100%);
 }
 
 .home-feature-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 42%, rgba(8, 20, 34, 0.76) 100%);
+  background: linear-gradient(180deg, transparent 42%, rgba(8, 20, 34, 0.56) 100%);
 }
 
 .home-feature-card-copy {
@@ -3767,6 +3894,14 @@ textarea {
 
 .home-immersive-section {
   padding-top: 2.3rem;
+}
+
+.home-what-we-do-section {
+  padding-top: 1.1rem;
+}
+
+.home-what-do-grid {
+  margin-top: 1rem;
 }
 
 .home-immersive-shell,

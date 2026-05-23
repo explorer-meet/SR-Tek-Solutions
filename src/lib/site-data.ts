@@ -94,6 +94,7 @@ export const values = [
 export const industries = [
   { title: "Healthcare", icon: "headset" as IconName, description: "Digital health, EHR, and compliance-driven solutions." },
   { title: "Banking & Financial Services", icon: "shield" as IconName, description: "Secure platforms, fintech, and regulatory compliance." },
+  { title: "Telecom", icon: "cloud" as IconName, description: "Network operations, OSS/BSS modernization, and telecom platform engineering." },
   { title: "Retail & E-Commerce", icon: "board" as IconName, description: "Omnichannel commerce, POS, and digital retail innovation." },
   { title: "Logistics", icon: "truck" as IconName, description: "Supply chain, fleet management, and logistics automation." },
   { title: "Manufacturing", icon: "workflow" as IconName, description: "Smart factory, IoT, and process optimization." },

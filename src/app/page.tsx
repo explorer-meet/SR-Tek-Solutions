@@ -19,6 +19,8 @@ const industryImages: Record<string, string> = {
     "https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=900",
   "Banking & Financial Services":
     "https://images.pexels.com/photos/4386372/pexels-photo-4386372.jpeg?auto=compress&cs=tinysrgb&w=900",
+  Telecom:
+    "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=900",
   "Retail & E-Commerce":
     "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=900",
   Logistics:
@@ -49,6 +51,54 @@ const featureBanners = [
       "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1800",
   },
 ];
+
+const defaultIndustryImage =
+  "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=900";
+
+const whatWeDoItems = [
+  {
+    title: "Software Development Company",
+    description: "Custom web, mobile, and enterprise product delivery with scalable architecture.",
+    icon: "board",
+    image:
+      "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "IT Consulting Services",
+    description: "Roadmaps, solution planning, and execution strategy aligned to business priorities.",
+    icon: "telescope",
+    image:
+      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "AI Consulting",
+    description: "Use-case discovery, model strategy, and AI rollout support for measurable value.",
+    icon: "sparkles",
+    image:
+      "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Cloud Migration Services",
+    description: "Secure cloud transition planning, modernization, and platform reliability engineering.",
+    icon: "cloud",
+    image:
+      "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Staffing Solutions",
+    description: "On-demand technical talent aligned to delivery pace, skill fit, and team culture.",
+    icon: "briefcase",
+    image:
+      "https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Enterprise Application Development",
+    description: "Business-critical platform development for ERP, CRM, workflow, and integration needs.",
+    icon: "workflow",
+    image:
+      "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+] as const;
 
 export default function HomePage() {
   return (
@@ -109,6 +159,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section home-what-we-do-section">
+        <div className="container">
+          <div className="home-immersive-shell">
+            <div className="home-immersive-head">
+              <span className="eyebrow">What we do</span>
+              <h2>End-to-end technology services designed for faster, cleaner delivery.</h2>
+              <p>
+                From engineering and consulting to cloud, AI, and staffing support, we help teams move from planning to
+                production with confidence.
+              </p>
+            </div>
+
+            <div className="values-grid pro-services-grid section-balanced-grid home-what-do-grid">
+              {whatWeDoItems.map((item) => (
+                <article className="card value-card pro-service-card" key={item.title}>
+                  <div className="page-card-media" style={{ backgroundImage: `url(${item.image})` }} aria-hidden="true" />
+                  <h3 className="tile-title-row">
+                    <IconGlyph name={item.icon} className="value-icon tile-title-icon" />
+                    <span>{item.title}</span>
+                  </h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section home-immersive-section">
         <div className="container">
           <div className="home-immersive-shell">
@@ -148,7 +226,7 @@ export default function HomePage() {
                     <article key={industry.title} className="home-industry-item">
                       <div
                         className="home-industry-media"
-                        style={{ backgroundImage: `url(${industryImages[industry.title]})` }}
+                        style={{ backgroundImage: `url(${industryImages[industry.title] || defaultIndustryImage})` }}
                         aria-hidden="true"
                       />
                       <span>{industry.title}</span>

@@ -4,6 +4,8 @@ import { IconGlyph } from "@/components/icon-glyph";
 import { siteMeta } from "@/lib/site-data";
 
 export default function ContactPage() {
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendly.com";
+
   return (
     <HeroShell
       eyebrow="Contact"
@@ -48,6 +50,17 @@ export default function ContactPage() {
                 {siteMeta.addresses.map((address) => (
                   <p key={address}>{address}</p>
                 ))}
+              </article>
+
+              <article className="contact-item contact-item-accent contact-book-now">
+                <div className="contact-label">
+                  <IconGlyph name="badge" className="contact-icon" />
+                  <h3>Book instantly</h3>
+                </div>
+                <p>Schedule a calendar slot directly with our team.</p>
+                <a className="btn btn-primary contact-book-now-btn" href={bookingUrl} target="_blank" rel="noreferrer">
+                  Book Instantly
+                </a>
               </article>
             </div>
           </aside>

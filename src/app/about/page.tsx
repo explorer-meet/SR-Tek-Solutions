@@ -3,65 +3,31 @@ import { SectionHeading } from "@/components/section-heading";
 import { IconGlyph } from "@/components/icon-glyph";
 import { capabilityPillars, values } from "@/lib/site-data";
 
+const capabilityImages: Record<string, string> = {
+  Strategy: "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  Talent: "https://images.pexels.com/photos/3183198/pexels-photo-3183198.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  Execution: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  Trust: "https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1200",
+};
+
+const valueImages: Record<string, string> = {
+  Integrity: "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  Respect: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  Trust: "https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  Teamwork: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "Mission-Driven Approach": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "Continuous Improvement": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200",
+};
+
 export default function AboutPage() {
   return (
     <HeroShell
-      eyebrow="About SR Tek"
       title="Mission-driven staffing and consulting, built on trust."
+      titleClassName="about-hero-title-fit"
       subtitle="We align business goals, delivery speed, and high-fit talent so your technology programs move with confidence."
       align="center"
       tone="about"
     >
-      <section className="pro-block reveal">
-        <SectionHeading
-          eyebrow="Who we are"
-          title="A practical partner for real outcomes"
-          description="SR Tek Solutions combines workforce strategy and engineering execution so organizations can scale without losing quality."
-          align="center"
-        />
-        <article className="card story-card about-story-intro">
-          <div className="story-flag">
-            <IconGlyph name="building" className="story-icon" />
-            <span>Our approach</span>
-          </div>
-          <div className="about-story-layout">
-            <div className="about-story-copy">
-              <p>
-                We partner with leadership teams to design the right staffing and delivery model, then execute with
-                clear ownership and measurable checkpoints.
-              </p>
-              <p>
-                From specialist staffing to full engagement squads, we keep programs aligned to business priorities,
-                budget, and timeline.
-              </p>
-            </div>
-            <div className="about-story-points">
-              <div className="about-story-point">
-                <IconGlyph name="workflow" className="story-icon" />
-                <div>
-                  <strong>Delivery alignment</strong>
-                  <p>Operating plans mapped to your roadmap, scope, and business targets.</p>
-                </div>
-              </div>
-              <div className="about-story-point">
-                <IconGlyph name="shield" className="story-icon" />
-                <div>
-                  <strong>Execution governance</strong>
-                  <p>Clear accountability, quality checkpoints, and transparent reporting cadence.</p>
-                </div>
-              </div>
-              <div className="about-story-point">
-                <IconGlyph name="briefcase" className="story-icon" />
-                <div>
-                  <strong>Flexible engagement</strong>
-                  <p>Scale from specialist staffing to full squads without losing momentum.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
       <section className="pro-block reveal">
         <SectionHeading
           title="How delivery is structured"
@@ -71,6 +37,11 @@ export default function AboutPage() {
         <div className="about-operating-grid">
           {capabilityPillars.map((pillar) => (
             <article className="pillar-card" key={pillar.title}>
+              <div
+                className="page-card-media"
+                style={{ backgroundImage: `url(${capabilityImages[pillar.title]})` }}
+                aria-hidden="true"
+              />
               <h3 className="tile-title-row">
                 <IconGlyph name={pillar.icon} className="pillar-icon tile-title-icon" />
                 <span>{pillar.title}</span>
@@ -90,6 +61,11 @@ export default function AboutPage() {
         <div className="values-grid section-balanced-grid">
           {values.map((value) => (
             <article className="card value-card" key={value.title}>
+              <div
+                className="page-card-media"
+                style={{ backgroundImage: `url(${valueImages[value.title]})` }}
+                aria-hidden="true"
+              />
               <h3 className="tile-title-row">
                 <IconGlyph name="badge" className="value-icon tile-title-icon" />
                 <span>{value.title}</span>

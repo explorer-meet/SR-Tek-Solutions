@@ -38,6 +38,7 @@ export const services = [
   { title: "IT Staffing", category: "Staffing", icon: "briefcase" as IconName, description: "Flexible staffing solutions to scale your IT teams quickly and efficiently." },
   { title: "QA Automation", category: "Quality", icon: "badge" as IconName, description: "Automated and manual testing to ensure software quality and reliability." },
   { title: "Cybersecurity", category: "Security", icon: "shield" as IconName, description: "Security assessments, monitoring, and compliance for enterprise protection." },
+  { title: "Product Engineering", category: "Engineering", icon: "board" as IconName, description: "Design, build, and evolve digital products with scalable architecture and user-focused delivery." },
 ];
 
 export const capabilityPillars = [

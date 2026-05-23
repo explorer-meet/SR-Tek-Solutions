@@ -1,90 +1,126 @@
 import Link from "next/link";
 import { IconGlyph } from "@/components/icon-glyph";
-import { SectionHeading } from "@/components/section-heading";
 import { TechnologyLogo } from "@/components/technology-logo";
 import { heroSignals, industries, services, siteMeta, techStack } from "@/lib/site-data";
-
-const solutionPreview = [
-  {
-    title: "Digital Core Modernization",
-    description: "Modernize legacy landscapes with phased architecture upgrades.",
-    icon: "workflow" as const,
-  },
-  {
-    title: "Data & AI Foundation",
-    description: "Build governed data platforms and AI-ready pipelines.",
-    icon: "layers" as const,
-  },
-  {
-    title: "Cloud Transformation",
-    description: "Migrate and optimize workloads with secure cloud operations.",
-    icon: "cloud" as const,
-  },
-  {
-    title: "Secure Delivery",
-    description: "Embed security controls across architecture and release flow.",
-    icon: "shield" as const,
-  },
-];
 
 const caseStudyPreview = [
   {
     title: "Healthcare Data Platform",
     impact: "Reporting cycle time reduced by 45% with governed pipelines.",
     icon: "headset" as const,
+    image:
+      "https://images.pexels.com/photos/7578802/pexels-photo-7578802.jpeg?auto=compress&cs=tinysrgb&w=1200",
   },
   {
     title: "Retail Cloud Migration",
     impact: "Release speed improved 2.3x through cloud-native delivery.",
     icon: "cloud" as const,
+    image:
+      "https://images.pexels.com/photos/12955855/pexels-photo-12955855.jpeg?auto=compress&cs=tinysrgb&w=1200",
   },
   {
     title: "Financial Risk Operations",
     impact: "Compliance visibility strengthened with real-time controls.",
     icon: "shield" as const,
+    image:
+      "https://images.pexels.com/photos/6120177/pexels-photo-6120177.jpeg?auto=compress&cs=tinysrgb&w=1200",
   },
 ];
 
-const careersPreview = [
+const serviceImages: Record<string, string> = {
+  "AI & Machine Learning":
+    "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "Custom Software Development":
+    "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "Cloud & DevOps":
+    "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "Data Engineering":
+    "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1200",
+};
+
+const industryImages: Record<string, string> = {
+  Healthcare:
+    "https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=900",
+  "Banking & Financial Services":
+    "https://images.pexels.com/photos/4386372/pexels-photo-4386372.jpeg?auto=compress&cs=tinysrgb&w=900",
+  "Retail & E-Commerce":
+    "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=900",
+  Logistics:
+    "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=900",
+  Manufacturing:
+    "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=900",
+  Pharma:
+    "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=900",
+};
+
+const featureBanners = [
   {
-    title: "Open roles",
-    description: "Engineering, data, QA, and cloud opportunities.",
-    icon: "briefcase" as const,
+    title: "Clients-First Delivery",
+    description: "Focused collaboration and transparent execution from day one.",
+    image:
+      "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1800",
   },
   {
-    title: "Growth path",
-    description: "Structured mentorship, ownership, and skill acceleration.",
-    icon: "telescope" as const,
+    title: "Engineering Teams That Scale",
+    description: "High-fit talent aligned with your roadmap and release pace.",
+    image:
+      "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1800",
   },
   {
-    title: "Modern stack",
-    description: "Hands-on work with enterprise-grade tools and platforms.",
-    icon: "badge" as const,
+    title: "Transformation With Measurable Outcomes",
+    description: "Modern cloud and data programs with clear business impact.",
+    image:
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1800",
   },
 ];
 
 export default function HomePage() {
   return (
-    <main>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow">Technology Staffing and Consulting</span>
-            <h1>You are building the future. We build the teams and platforms behind it.</h1>
-            <p className="hero-lead">
-              High-fit IT talent and delivery expertise across ERP, CRM, cloud, security, and modern apps.
-            </p>
-            <div className="hero-actions">
-              <Link className="btn btn-primary" href="/services" prefetch>
-                Explore Services
-              </Link>
-              <Link className="btn btn-secondary" href="/about" prefetch>
-                About SR Tek
-              </Link>
+    <main className="home-compact-main">
+      <section className="section home-feature-gallery-section">
+        <div className="container">
+          <div className="home-feature-slider" aria-label="Client-first image banners">
+            <div className="home-feature-slider-track">
+              {[...featureBanners, featureBanners[0]].map((banner, index) => (
+                <article
+                  className="home-feature-banner-card"
+                  key={`${banner.title}-${index}`}
+                  style={{ backgroundImage: `url(${banner.image})` }}
+                >
+                  <div className="home-feature-card-overlay" />
+                  <div className="home-feature-card-copy">
+                    <h3>{banner.title}</h3>
+                    <p>{banner.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
-            <div className="signal-strip">
+          </div>
+        </div>
+      </section>
+
+      <section className="hero home-hero-refined">
+        <div className="container">
+          <div className="home-hero-refined-shell">
+            <div className="home-hero-refined-copy">
+              <span className="eyebrow">Technology Staffing and Consulting</span>
+              <h1>Built for faster delivery and stronger client confidence.</h1>
+              <p className="hero-lead">
+                IT talent and engineering leadership across cloud, ERP, CRM, data, security, and modern product teams.
+              </p>
+              <div className="hero-actions">
+                <Link className="btn btn-primary" href="/services" prefetch>
+                  Explore Services
+                </Link>
+                <Link className="btn btn-secondary" href="/contact" prefetch>
+                  Start a Project
+                </Link>
+              </div>
+            </div>
+
+            <div className="home-hero-signal-row">
               {heroSignals.map((signal) => (
-                <div className="signal-pill" key={signal.label}>
+                <div className="home-hero-signal-pill" key={signal.label}>
                   <IconGlyph name={signal.icon} className="signal-icon" />
                   <div>
                     <strong>{signal.value}</strong>
@@ -94,265 +130,131 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-
-          <aside className="hero-art" aria-label="Visual summary">
-            <div className="hero-stage-glow hero-stage-glow-a" />
-            <div className="hero-stage-glow hero-stage-glow-b" />
-            <div className="hero-stage-glow hero-stage-glow-c" />
-
-            <div className="hero-command-card">
-              <div className="hero-card-label">
-                <IconGlyph name="sparkles" className="card-icon" />
-                <span>Delivery command center</span>
-              </div>
-              <h3>Execution visibility at every phase</h3>
-              <p>From strategy to deployment, every lane has accountable owners and clear momentum.</p>
-
-              <div className="hero-command-metrics">
-                <div className="hero-command-metric">
-                  <strong>24h</strong>
-                  <span>Staffing response</span>
-                </div>
-                <div className="hero-command-metric">
-                  <strong>97%</strong>
-                  <span>Sprint reliability</span>
-                </div>
-                <div className="hero-command-metric">
-                  <strong>2.3x</strong>
-                  <span>Delivery velocity</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="hero-track-grid">
-              <div className="hero-track-row">
-                <div className="hero-track-label">
-                  <IconGlyph name="telescope" className="card-icon" />
-                  <span>Strategy</span>
-                </div>
-                <div className="hero-track-bar">
-                  <span style={{ width: "86%" }} />
-                </div>
-              </div>
-              <div className="hero-track-row">
-                <div className="hero-track-label">
-                  <IconGlyph name="workflow" className="card-icon" />
-                  <span>Execution</span>
-                </div>
-                <div className="hero-track-bar">
-                  <span style={{ width: "92%" }} />
-                </div>
-              </div>
-              <div className="hero-track-row">
-                <div className="hero-track-label">
-                  <IconGlyph name="shield" className="card-icon" />
-                  <span>Governance</span>
-                </div>
-                <div className="hero-track-bar">
-                  <span style={{ width: "88%" }} />
-                </div>
-              </div>
-            </div>
-
-            <div className="hero-status-row">
-              <span className="hero-status-live">Live delivery sync</span>
-              <span className="hero-status-chip">Weekly roadmap checkpoints</span>
-            </div>
-
-            <div className="hero-gridline" />
-          </aside>
         </div>
       </section>
 
-      <section className="section landing-services">
+      <section className="section home-immersive-section">
         <div className="container">
-          <div className="landing-shell landing-shell-services">
-            <SectionHeading
-              eyebrow="Services"
-              title="Specialized services for high-stakes programs"
-              titleClassName="services-title-single-line"
-              action={
-                <Link className="btn btn-secondary" href="/services" prefetch>
-                  View All Services
+          <div className="home-immersive-shell">
+            <div className="home-immersive-head">
+              <span className="eyebrow">Experience Layers</span>
+              <h2>Visual-first sections with clear, readable content.</h2>
+              <p>
+                Services, industries, and delivery proof are now separated into dedicated horizontal panels for better
+                image clarity and easier reading.
+              </p>
+            </div>
+
+            <div className="home-split-stack">
+              <article className="home-immersive-card home-split-panel home-service-lane">
+                <h3>Service lanes</h3>
+                <div className="home-service-mini-grid">
+                  {services.slice(0, 4).map((service) => (
+                    <div className="home-mini-tile" key={service.title}>
+                      <div
+                        className="home-mini-tile-media"
+                        style={{ backgroundImage: `url(${serviceImages[service.title]})` }}
+                        aria-hidden="true"
+                      />
+                      <span>{service.title}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link className="home-inline-link" href="/services" prefetch>
+                  See all services
                 </Link>
-              }
-            />
-            <div className="services-grid pro-services-grid section-balanced-grid">
-              {services.slice(0, 6).map((service) => (
-                <article className="service-card service-card-fancy reveal" key={service.title}>
-                  <h3 className="tile-title-row">
-                    <IconGlyph name={service.icon} className="service-icon tile-title-icon" />
-                    <span>{service.title}</span>
-                  </h3>
-                  <p>{service.description}</p>
-                </article>
-              ))}
+              </article>
+
+              <article className="home-immersive-card home-split-panel home-industry-lane">
+                <h3>Industry snapshots</h3>
+                <div className="home-industry-grid">
+                  {industries.slice(0, 6).map((industry) => (
+                    <article key={industry.title} className="home-industry-item">
+                      <div
+                        className="home-industry-media"
+                        style={{ backgroundImage: `url(${industryImages[industry.title]})` }}
+                        aria-hidden="true"
+                      />
+                      <span>{industry.title}</span>
+                    </article>
+                  ))}
+                </div>
+                <Link className="home-inline-link" href="/industries" prefetch>
+                  Browse industries
+                </Link>
+              </article>
+
+              <article className="home-immersive-card home-split-panel home-proof-lane">
+                <h3>Delivery proof</h3>
+                <div className="home-proof-list">
+                  {caseStudyPreview.map((study) => (
+                    <div key={study.title}>
+                      <div className="home-proof-media" style={{ backgroundImage: `url(${study.image})` }} aria-hidden="true" />
+                      <p>{study.title}</p>
+                      <span>{study.impact}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link className="home-inline-link" href="/case-studies" prefetch>
+                  View case studies
+                </Link>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section landing-industries">
+      <section className="section home-tech-section">
         <div className="container">
-          <div className="landing-shell landing-shell-industries">
-            <SectionHeading
-              eyebrow="Industries"
-              title="Domain-aligned expertise"
-              action={
-                <Link className="btn btn-secondary" href="/industries" prefetch>
-                  Explore Industries
-                </Link>
-              }
-            />
-            <div className="values-grid pro-industry-grid section-balanced-grid">
-              {industries.slice(0, 6).map((industry) => (
-                <article className="card industry-card pro-industry-card reveal" key={industry.title}>
-                  <h3 className="tile-title-row">
-                    <IconGlyph name={industry.icon} className="industry-icon tile-title-icon" />
-                    <span>{industry.title}</span>
-                  </h3>
-                  <p>{industry.description}</p>
-                </article>
-              ))}
+          <div className="home-tech-shell">
+            <div className="home-tech-head">
+              <span className="eyebrow">Technology Stack</span>
+              <h2>Modern platforms used in active client programs.</h2>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section landing-solutions">
-        <div className="container">
-          <div className="landing-shell landing-shell-solutions">
-            <SectionHeading
-              eyebrow="Solutions"
-              title="Integrated tracks for transformation"
-              titleClassName="landing-heading-single-line"
-              action={
-                <Link className="btn btn-secondary" href="/solutions" prefetch>
-                  Explore Solutions
-                </Link>
-              }
-            />
-            <div className="services-grid pro-services-grid section-balanced-grid">
-              {solutionPreview.map((track) => (
-                <article className="service-card service-card-fancy reveal" key={track.title}>
-                  <h3 className="tile-title-row">
-                    <IconGlyph name={track.icon} className="service-icon tile-title-icon" />
-                    <span>{track.title}</span>
-                  </h3>
-                  <p>{track.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section landing-case-studies">
-        <div className="container">
-          <div className="landing-shell landing-shell-case-studies">
-            <SectionHeading
-              eyebrow="Case Studies"
-              title="Proof from real delivery programs"
-              titleClassName="landing-heading-single-line"
-              action={
-                <Link className="btn btn-secondary" href="/case-studies" prefetch>
-                  View Case Studies
-                </Link>
-              }
-            />
-            <div className="values-grid pro-case-grid section-balanced-grid">
-              {caseStudyPreview.map((study) => (
-                <article className="card value-card pro-case-card reveal" key={study.title}>
-                  <h3 className="tile-title-row">
-                    <IconGlyph name={study.icon} className="value-icon tile-title-icon" />
-                    <span>{study.title}</span>
-                  </h3>
-                  <p>{study.impact}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section landing-careers">
-        <div className="container">
-          <div className="landing-shell landing-shell-careers">
-            <SectionHeading
-              eyebrow="Careers"
-              title="Build your career on high-impact work"
-              titleClassName="landing-heading-single-line"
-              action={
-                <Link className="btn btn-secondary" href="/careers" prefetch>
-                  Explore Careers
-                </Link>
-              }
-            />
-            <div className="values-grid pro-case-grid section-balanced-grid">
-              {careersPreview.map((item) => (
-                <article className="card value-card pro-case-card reveal" key={item.title}>
-                  <h3 className="tile-title-row">
-                    <IconGlyph name={item.icon} className="value-icon tile-title-icon" />
-                    <span>{item.title}</span>
-                  </h3>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section landing-technologies">
-        <div className="container">
-          <div className="landing-shell landing-shell-technologies">
-            <SectionHeading
-              eyebrow="Technologies"
-              title="Tools used across active delivery programs"
-              titleClassName="landing-heading-single-line"
-              action={
-                <Link className="btn btn-secondary" href="/careers" prefetch>
-                  Explore Careers
-                </Link>
-              }
-            />
-            <div className="values-grid pro-case-grid section-balanced-grid">
-              {techStack.map((tech) => (
-                <article className="card value-card pro-case-card tech-stack-card reveal" key={tech.name}>
-                  <h3 className="tile-title-row">
+            <div className="home-tech-marquee" aria-label="Technology logos">
+              <div className="home-tech-track">
+                {[...techStack.slice(0, 10), ...techStack.slice(0, 10)].map((tech, index) => (
+                  <article className="home-tech-item" key={`${tech.name}-${index}`}>
                     <TechnologyLogo name={tech.logo} className="tech-logo-icon" />
                     <span>{tech.name}</span>
-                  </h3>
-                </article>
-              ))}
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div className="home-cta-strip">
+              <Link className="btn btn-secondary" href="/careers" prefetch>
+                Explore Careers
+              </Link>
+              <Link className="btn btn-primary" href="/contact" prefetch>
+                Contact Us
+              </Link>
+              <div className="home-contact-pill">
+                <IconGlyph name="briefcase" className="signal-icon" />
+                <span>{siteMeta.phones[0]}</span>
+              </div>
+              <div className="home-contact-pill">
+                <IconGlyph name="sparkles" className="signal-icon" />
+                <span>{siteMeta.email}</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section landing-contact">
+      <section className="section home-bottom-cta">
         <div className="container">
-          <div className="landing-shell landing-shell-contact">
-            <SectionHeading
-              eyebrow="Contact"
-              title="Start a focused conversation"
-              titleClassName="landing-heading-single-line"
-              description="Talk to our team for staffing strategy, solution planning, and execution support."
-              action={
-                <Link className="btn btn-primary" href="/contact" prefetch>
-                  Contact Us
-                </Link>
-              }
-            />
-            <div className="landing-contact-points">
-              <span>
-                <IconGlyph name="briefcase" className="signal-icon" />
-                {siteMeta.phones[0]}
-              </span>
-              <span>
-                <IconGlyph name="sparkles" className="signal-icon" />
-                {siteMeta.email}
-              </span>
+          <div className="home-bottom-shell">
+            <div>
+              <span className="eyebrow">Next Step</span>
+              <h2>Tell us your delivery target. We assemble the team and execution path.</h2>
+            </div>
+            <div className="home-bottom-actions">
+              <Link className="btn btn-primary" href="/contact" prefetch>
+                Book a Discovery Call
+              </Link>
+              <Link className="btn btn-secondary" href="/about" prefetch>
+                Why SR Tek
+              </Link>
             </div>
           </div>
         </div>

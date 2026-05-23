@@ -36,7 +36,7 @@ export default function SolutionsPage() {
   return (
     <HeroShell
       title="Integrated solutions for business transformation"
-      titleClassName="solutions-hero-title-fit"
+      titleClassName="hero-title-consistent"
       subtitle="We combine consulting, engineering, and staffing into practical solution blueprints."
       align="center"
       tone="solutions"

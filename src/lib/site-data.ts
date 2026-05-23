@@ -98,8 +98,32 @@ export const industries = [
   { title: "Logistics", icon: "truck" as IconName, description: "Supply chain, fleet management, and logistics automation." },
   { title: "Manufacturing", icon: "workflow" as IconName, description: "Smart factory, IoT, and process optimization." },
   { title: "Pharma", icon: "flask" as IconName, description: "Pharma IT, R&D, and regulatory data management." },
-  { title: "Telecom", icon: "layers" as IconName, description: "OSS/BSS, network automation, and telecom analytics." },
 ];
+
+export const caseStudyPreview = [
+  {
+    title: "Healthcare Data Platform",
+    impact: "Reporting cycle time reduced by 45% with governed pipelines.",
+    icon: "headset" as IconName,
+    image:
+      "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Retail Cloud Migration",
+    impact: "Release speed improved 2.3x through cloud-native delivery.",
+    icon: "cloud" as IconName,
+    image:
+      "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Financial Risk Operations",
+    impact: "Compliance visibility strengthened with real-time controls.",
+    icon: "shield" as IconName,
+    image:
+      "https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+];
+
 export const techStack: Array<{ name: string; logo: TechnologyLogoName }> = [
   { name: "Amazon Web Services", logo: "aws" },
   { name: "Microsoft Azure", logo: "azure" },

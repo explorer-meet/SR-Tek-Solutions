@@ -14,16 +14,19 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-topbar">
         <div className="container topbar-inner">
-          <div className="topbar-pill">
-            <Sparkles size={14} />
-            <span>20+ years of delivery experience</span>
+          <div className="topbar-left">
+            <div className="topbar-pill topbar-pill-accent">
+              <Sparkles size={14} />
+              <span>20+ years of delivery experience</span>
+            </div>
+            <span className="topbar-track">Enterprise staffing, consulting, and solution delivery</span>
           </div>
           <div className="topbar-links">
-            <Link href={`tel:${siteMeta.phones[0]}`} className="topbar-link">
+            <Link href={`tel:${siteMeta.phones[0]}`} className="topbar-link topbar-link-chip">
               <Phone size={14} />
               <span>{siteMeta.phones[0]}</span>
             </Link>
-            <Link href={`mailto:${siteMeta.email}`} className="topbar-link">
+            <Link href={`mailto:${siteMeta.email}`} className="topbar-link topbar-link-chip">
               <Mail size={14} />
               <span>{siteMeta.email}</span>
             </Link>
@@ -32,10 +35,10 @@ export function SiteHeader() {
       </div>
       <div className="container header-inner">
         <Link href="/" className="logo" onClick={() => setOpen(false)}>
-            <span className="logo-brand" aria-label={`${siteMeta.name} logo`}>
-              <strong className="logo-main">SR TEK</strong>
-              <span className="logo-sub">SOLUTIONS</span>
-            </span>
+          <span className="logo-brand" aria-label={`${siteMeta.name} logo`}>
+            <strong className="logo-main">SR TEK</strong>
+            <span className="logo-sub">SOLUTIONS</span>
+          </span>
         </Link>
         <button
           className="menu-btn"
@@ -65,7 +68,7 @@ export function SiteHeader() {
           </ul>
         </nav>
         <div className="header-cta">
-          <Link className="btn btn-secondary header-cta-btn" href="/contact" prefetch>
+          <Link className="btn btn-primary header-cta-btn" href="/contact" prefetch>
             Talk to Team <ArrowRight size={16} />
           </Link>
         </div>

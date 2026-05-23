@@ -15,15 +15,13 @@ const industryImages: Record<string, string> = {
     "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1200",
   Pharma:
     "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  Telecom:
-    "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1200",
 };
 
 export default function IndustriesPage() {
   return (
     <HeroShell
       title="Built for sector-specific complexity"
-      titleClassName="hero-title-single-line"
+      titleClassName="hero-title-consistent"
       subtitle="We shape digital delivery models that fit the operational and compliance realities of each industry."
       align="center"
       tone="industries"
@@ -44,16 +42,6 @@ export default function IndustriesPage() {
               <p>{industry.description}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="pro-block reveal">
-        <div className="cta pro-inline-cta">
-          <div>
-            <h3>Need a domain-focused implementation team?</h3>
-            <p>We can assemble specialists aligned to your industry workflows and delivery standards.</p>
-          </div>
-          <span className="eyebrow">Advisory + execution + staffing</span>
         </div>
       </section>
     </HeroShell>

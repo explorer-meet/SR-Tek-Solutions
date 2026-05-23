@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <HeroShell
       title="Mission-driven staffing and consulting, built on trust."
-      titleClassName="about-hero-title-fit"
+      titleClassName="hero-title-consistent"
       subtitle="We align business goals, delivery speed, and high-fit talent so your technology programs move with confidence."
       align="center"
       tone="about"

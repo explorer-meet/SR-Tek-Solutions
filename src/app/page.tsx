@@ -1,31 +1,7 @@
 import Link from "next/link";
 import { IconGlyph } from "@/components/icon-glyph";
 import { TechnologyLogo } from "@/components/technology-logo";
-import { heroSignals, industries, services, siteMeta, techStack } from "@/lib/site-data";
-
-const caseStudyPreview = [
-  {
-    title: "Healthcare Data Platform",
-    impact: "Reporting cycle time reduced by 45% with governed pipelines.",
-    icon: "headset" as const,
-    image:
-      "https://images.pexels.com/photos/7578802/pexels-photo-7578802.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-  {
-    title: "Retail Cloud Migration",
-    impact: "Release speed improved 2.3x through cloud-native delivery.",
-    icon: "cloud" as const,
-    image:
-      "https://images.pexels.com/photos/12955855/pexels-photo-12955855.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-  {
-    title: "Financial Risk Operations",
-    impact: "Compliance visibility strengthened with real-time controls.",
-    icon: "shield" as const,
-    image:
-      "https://images.pexels.com/photos/6120177/pexels-photo-6120177.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-];
+import { caseStudyPreview, heroSignals, industries, services, techStack } from "@/lib/site-data";
 
 const serviceImages: Record<string, string> = {
   "AI & Machine Learning":
@@ -186,13 +162,16 @@ export default function HomePage() {
 
               <article className="home-immersive-card home-split-panel home-proof-lane">
                 <h3>Delivery proof</h3>
-                <div className="home-proof-list">
+                <div className="values-grid pro-case-grid section-balanced-grid">
                   {caseStudyPreview.map((study) => (
-                    <div key={study.title}>
-                      <div className="home-proof-media" style={{ backgroundImage: `url(${study.image})` }} aria-hidden="true" />
-                      <p>{study.title}</p>
-                      <span>{study.impact}</span>
-                    </div>
+                    <article className="card value-card pro-case-card" key={study.title}>
+                      <div className="page-card-media" style={{ backgroundImage: `url(${study.image})` }} aria-hidden="true" />
+                      <h3 className="tile-title-row">
+                        <IconGlyph name={study.icon} className="value-icon tile-title-icon" />
+                        <span>{study.title}</span>
+                      </h3>
+                      <p>{study.impact}</p>
+                    </article>
                   ))}
                 </div>
                 <Link className="home-inline-link" href="/case-studies" prefetch>
@@ -222,20 +201,9 @@ export default function HomePage() {
               </div>
             </div>
             <div className="home-cta-strip">
-              <Link className="btn btn-secondary" href="/careers" prefetch>
+              <Link className="home-inline-link" href="/careers" prefetch>
                 Explore Careers
               </Link>
-              <Link className="btn btn-primary" href="/contact" prefetch>
-                Contact Us
-              </Link>
-              <div className="home-contact-pill">
-                <IconGlyph name="briefcase" className="signal-icon" />
-                <span>{siteMeta.phones[0]}</span>
-              </div>
-              <div className="home-contact-pill">
-                <IconGlyph name="sparkles" className="signal-icon" />
-                <span>{siteMeta.email}</span>
-              </div>
             </div>
           </div>
         </div>

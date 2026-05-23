@@ -27,7 +27,7 @@ export default function ServicesPage() {
   return (
     <HeroShell
       title="Service lines designed for enterprise delivery"
-      titleClassName="services-hero-title-fit"
+      titleClassName="hero-title-consistent"
       subtitle="From AI to cloud and staffing, we combine specialist expertise with disciplined execution."
       align="center"
       tone="services"

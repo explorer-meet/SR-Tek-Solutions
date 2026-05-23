@@ -16,6 +16,11 @@ export default function ContactPage() {
       <section className="pro-block reveal">
         <div className="contact-grid pro-contact-grid">
           <aside className="contact-panel">
+            <div className="contact-panel-header contact-panel-header-compact">
+              <h3>Direct channels</h3>
+              <p>Phone, email, and office details are below.</p>
+            </div>
+
             <div className="contact-stack">
               <article className="contact-item contact-item-accent">
                 <div className="contact-label">
@@ -44,22 +49,12 @@ export default function ContactPage() {
                   <p key={address}>{address}</p>
                 ))}
               </article>
-
-              <article className="contact-item contact-note">
-                <IconGlyph name="shield" className="contact-icon large" />
-                <div>
-                  <h3>Response commitment</h3>
-                  <p>Every inquiry is routed to the right specialist for a clear and fast response.</p>
-                </div>
-              </article>
             </div>
           </aside>
 
           <div className="contact-form-wrap">
             <div className="contact-form-glow" aria-hidden="true" />
-            <article className="form pro-form-card">
-              <h3>Send a project brief</h3>
-              <p>Tell us about your timeline, team needs, and expected outcomes.</p>
+            <article className="form pro-form-card contact-form-card">
               <ContactForm />
             </article>
           </div>

@@ -84,7 +84,6 @@ export function CareersOpenings() {
 
       <div className="careers-results-meta">
         <span>{filteredRoles.length} open position{filteredRoles.length === 1 ? "" : "s"}</span>
-        <span>Scroll to review active roles</span>
       </div>
 
       <div className="careers-results-scroll" role="list" aria-label="Open positions">

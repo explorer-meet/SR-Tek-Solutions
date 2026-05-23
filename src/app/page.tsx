@@ -14,6 +14,9 @@ const serviceImages: Record<string, string> = {
     "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1200",
 };
 
+const defaultServiceImage =
+  "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1200";
+
 const industryImages: Record<string, string> = {
   Healthcare:
     "https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=900",
@@ -207,7 +210,7 @@ export default function HomePage() {
                     <div className="home-mini-tile" key={service.title}>
                       <div
                         className="home-mini-tile-media"
-                        style={{ backgroundImage: `url(${serviceImages[service.title]})` }}
+                        style={{ backgroundImage: `url(${serviceImages[service.title] || defaultServiceImage})` }}
                         aria-hidden="true"
                       />
                       <span>{service.title}</span>

@@ -19,6 +19,9 @@ const industryImages: Record<string, string> = {
     "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=1200",
 };
 
+const defaultIndustryImage =
+  "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200";
+
 export default function IndustriesPage() {
   return (
     <HeroShell
@@ -34,7 +37,7 @@ export default function IndustriesPage() {
             <article className="card industry-card pro-industry-card" key={industry.title}>
               <div
                 className="page-card-media"
-                style={{ backgroundImage: `url(${industryImages[industry.title]})` }}
+                style={{ backgroundImage: `url(${industryImages[industry.title] || defaultIndustryImage})` }}
                 aria-hidden="true"
               />
               <h3 className="tile-title-row">
